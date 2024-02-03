@@ -1,0 +1,52 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="최신순"
+        android:id="@+id/tvLast"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="평점 높은 순"
+        android:id="@+id/tvRatingU"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="평점 낮은 순"
+        android:id="@+id/tvRatingD"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가격 높은 순"
+        android:id="@+id/tvMoneyU"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가격 낮은 순"
+        android:id="@+id/tvMoneyD"
+        android:layout_marginBottom="2dp"/>
+</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="선택완료"
+        android:id="@+id/selectBtn"
+        android:backgroundTint="@color/color1"
+        android:textColor="@color/white"
+        ></Button>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:id="@+id/reviewLayout">
+
+    <!-- 이미지뷰로 리뷰 이미지를 표시합니다. -->
+<ImageView
+android:id="@+id/review_item_image"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:scaleType="centerCrop"
+android:adjustViewBounds="true" />
+    </LinearLayout>

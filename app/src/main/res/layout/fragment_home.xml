@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp">
+
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="샵 이름을 검색하세요."
+                android:textSize="14dp"
+                android:background="@drawable/round"
+                />
+
+            <ImageView
+                android:id="@+id/mapIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/map"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/horizontalSpinner"
+            android:layout_below="@+id/topBar"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/spinnerArtStyle"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Art Style"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/color1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/spinnerArray"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="최신순"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textColor="@color/color1"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+
+        <!-- 리뷰 목록 RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/horizontalSpinner"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            android:orientation="vertical" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" />
+</FrameLayout>

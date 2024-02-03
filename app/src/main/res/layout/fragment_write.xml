@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteFragment">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="후기 작성"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textColor="@color/color1"
+            android:textStyle="bold"
+            android:id="@+id/Name"
+            >
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 샵 검색 버튼 -->
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="샵 검색하기"
+                android:textSize="12dp"
+                />
+
+            <!-- 샵 이름 표시 영역 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/shopNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text=""
+                    android:textSize="15dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/addressTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:includeFontPadding="false"
+                    android:text=""
+                    android:textSize="9dp"
+                    android:textColor="#8F8F8F" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- 사진 첨부 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/photoAttachmentButton"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:text="사진 첨부\n+"
+                android:textSize="12dp"
+                android:layout_below="@id/searchBar"
+                />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/photoAttachmentButton">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="1dp">
+
+                    <ImageView
+                        android:id="@+id/attachedImageView1"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:contentDescription="첨부된 사진"
+                        android:layout_marginLeft="2dp"
+                        android:scaleType="center"
+                        />
+                    <ImageView
+                        android:id="@+id/attachedImageView2"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:contentDescription="첨부된 사진"
+                        android:layout_marginLeft="2dp"
+                        android:scaleType="center"
+                        />
+                    <ImageView
+                        android:id="@+id/attachedImageView3"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:contentDescription="첨부된 사진"
+                        android:layout_marginLeft="2dp"
+                        android:scaleType="center"
+                        />
+                    <ImageView
+                        android:id="@+id/attachedImageView4"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:contentDescription="첨부된 사진"
+                        android:layout_marginLeft="2dp"
+                        android:scaleType="center"
+                       />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <!-- 카테고리 선택 (체크박스) -->
+
+        <GridLayout
+            android:id="@+id/categoryGridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topBar"
+            android:columnCount="5"
+            android:rowCount="2"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/glamCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="화려" />
+
+            <CheckBox
+                android:id="@+id/simpleCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="심플" />
+
+            <CheckBox
+                android:id="@+id/uniqueCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="유니크" />
+
+            <CheckBox
+                android:id="@+id/y2kCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="Y2K" />
+            <CheckBox
+                android:id="@+id/themeCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="테마" />
+            <CheckBox
+                android:id="@+id/romanticCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="로맨틱" />
+            <CheckBox
+                android:id="@+id/drawCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="드로우" />
+            <CheckBox
+                android:id="@+id/patternCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="패턴" />
+            <CheckBox
+                android:id="@+id/graCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="그라" />
+        </GridLayout>
+
+        <!-- 가격 선택 (SeekBar) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+            <SeekBar
+                android:id="@+id/priceSeekBar"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:max="10"
+                android:progress="0"
+                android:thumbOffset="5dp"
+                />
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1만원"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="start" />
+        </LinearLayout>
+
+
+        <!-- 후기 별점 (RatingBar) -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:layout_gravity="center_horizontal" />
+        <!-- 후기 작성 (EditText) -->
+        <EditText
+            android:id="@+id/reviewEditText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="기타 후기 내용을 작성해주세요."
+            android:textSize="13dp"
+            android:maxLines="5"
+            android:inputType="textMultiLine"
+            android:background="#E6E6E6"
+            android:gravity="top|start"
+            android:padding="10dp"/>
+
+        <!-- 글자 수 표시 (우측 하단) -->
+        <TextView
+            android:id="@+id/characterCountTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="(0/1000)"
+            android:gravity="right"/>
+
+        <!-- 글 올리기 버튼 -->
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="글 올리기"
+            android:layout_alignParentBottom="true"
+            />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</FrameLayout>
+</ScrollView>

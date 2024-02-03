@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingConstraints">
+    <solid android:color="@color/color1" /> <!-- 배경 색상을 원하는 색상 코드로 변경 -->
+    <corners android:radius="50dp" /> <!-- 각이 둥근 정도를 조절할 수 있습니다. -->
+    <padding android:left="5dp"></padding>
+    <padding android:right="5dp"></padding>
+</shape>

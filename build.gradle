@@ -1,0 +1,26 @@
+buildscript {
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.android.tools.build:gradle:7.0.0' // 최신 버전으로 업데이트
+    }
+    repositories {
+        google() // 여기에 추가
+        jcenter()
+    }
+}
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '8.1.0' apply false
+    id 'com.android.library' version '8.1.0' apply false
+    //구글 서비스 추가
+    id 'com.google.gms.google-services' version '4.3.15' apply false
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.1' apply false
+}
+
+allprojects { // 모든 프로젝트에 리포지토리 설정을 추가합니다.
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

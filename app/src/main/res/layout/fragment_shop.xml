@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ShopFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color1"
+        android:padding="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/iconBar"
+            android:orientation="horizontal"
+            android:gravity="right">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/naver"
+                android:layout_marginHorizontal="2dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/NaverImg"></ImageView>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/kakao"
+                android:layout_marginHorizontal="2dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/KaKaoImg"
+                ></ImageView>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="상점 이름"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:id="@+id/ShopName" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="상점 평점 및 리뷰 개수"
+                    android:textColor="@color/white"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/ShopGrade" />
+            </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="상점 주소주소주소주솢소"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:id="@+id/ShopAddress" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color1"
+        android:orientation="vertical">
+        <!-- Button을 color1 배경색을 가진 레이아웃에서 하단에서 10dp 위에 위치하도록 추가 -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4DFFFFFF"
+            android:text="리뷰 작성하기"
+            android:includeFontPadding="false"
+            android:textColor="@color/color1"
+            android:id="@+id/WriteButton"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- 스피너와 리뷰 목록 RecyclerView를 포함한 수평 레이아웃 추가 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- 스피너 (오른쪽 상단에 위치) -->
+            <Spinner
+                android:id="@+id/sortSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                style="@style/SpinnerDropDownItemStyle"/>
+            <!-- 리뷰 목록 RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                android:orientation="vertical" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
